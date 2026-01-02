@@ -1,0 +1,90 @@
+/* Reset and box-sizing: remove default spacing and ensure predictable box model */
+* {
+  /* Remove default inner spacing */
+  padding: 0;
+  /* Remove default outer spacing */
+  margin: 0;
+  /* Use border-box so padding and border are included in element width/height */
+  box-sizing: border-box;
+}
+
+/* Page-level styles: set font, background, and center content */
+body {
+  /* Primary font stack */
+  font-family: Arial, sans-serif;
+  /* Solid black background for the game */
+  background-color: #000;
+  /* Default text color: white for high contrast on black background */
+  color: #fff;
+  /* Base font size for content (1.5 times root font size) */
+  font-size: 1.5rem;
+  /* Ensure body fills the viewport height */
+  min-height: 100vh;
+  /* Use flex layout to center children vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Center text inside elements */
+  text-align: center;
+  /* Inner spacing around the page content */
+  padding: 2rem;
+}
+
+/* Player card / panel styling */
+.player-box {
+  /* Space around each player box */
+  margin: 2rem;
+  /* Inner padding inside the box */
+  padding: 2rem;
+  /* White border to separate the box from the black background */
+  border: 2px solid #fff;
+  /* Slight rounding for visual softness */
+  border-radius: 8px;
+  /* Keep box inline so multiple boxes can sit beside each other if space allows */
+  display: inline-block;
+  /* Fixed width to keep layout consistent */
+  width: 300px;
+}
+
+/* Basic button styling used for game controls */
+button {
+  /* Comfortable click/tap area */
+  padding: 1rem 2rem;
+  /* Vertical spacing separating the button from other elements */
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  /* Slightly larger button text */
+  font-size: 1.25rem;
+  /* Small rounding for button corners */
+  border-radius: 4px;
+  /* Invert colors: white background with black text for clear affordance */
+  background-color: #fff;
+  color: #000;
+  /* Remove default border so we control the visual look */
+  border: none;
+  /* Pointer cursor to indicate button is clickable */
+  cursor: pointer;
+  /* Smooth transition when background-color changes (e.g., hover) */
+  transition: background-color 0.2s ease;
+}
+
+/* Visual styles when a button is disabled */
+button:disabled {
+  /* Darker background to signal disabled state */
+  background-color: #444;
+  /* Muted text color */
+  color: #aaa;
+  /* Show not-allowed cursor to reinforce that it can't be interacted with */
+  cursor: not-allowed;
+}
+
+/* Winner message styling */
+#winner {
+  /* Space above the winner message */
+  margin-top: 3rem;
+  /* Make the winner text larger for emphasis */
+  font-size: 2rem;
+  /* Green color to indicate success/win */
+  color: #0f0;
+}

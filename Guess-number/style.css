@@ -46,7 +46,7 @@ body {
 
   border-radius: 6px;
 
-  -moz-appearance: textfield;
+  appearance: textfield;
 
 }
 
